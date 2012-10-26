@@ -14,6 +14,7 @@
   "main": "lib/zombie",
   "scripts": {
     "prepublish":   "make build",
+    "install":   "make build",
     "test":         "./node_modules/.bin/mocha"
   },
   "engines": {
