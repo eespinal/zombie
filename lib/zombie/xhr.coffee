@@ -39,8 +39,7 @@ XMLHttpRequest = (window)->
       url = URL.parse(URL.resolve(window.location.href, url))
       url.hostname ||= window.location.hostname
       url.host = if url.port then "#{url.hostname}:#{url.port}" else url.hostname
-      url.hash = null
-      throw new html.DOMException(html.SECURITY_ERR, "Cannot make request to different domain") unless url.host == window.location.host
+      url.hash = null      
       throw new html.DOMException(html.NOT_SUPPORTED_ERR, "Only HTTP/S protocol supported") unless url.protocol in ["http:", "https:"]
       [user, password] = url.auth.split(":") if url.auth
 
